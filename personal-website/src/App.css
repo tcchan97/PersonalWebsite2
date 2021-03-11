@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.glftContainer{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.glftContainer2{
+  width: 100%;
+  height: 50vh;
+  background-color: #65ffb3;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.title{
+  position: absolute;
+  font-size: 60px;
+  font-weight:bolder;
+  left: 190px;
+  z-index: 1;
+}
+
+.titlelast{
+  -webkit-text-stroke: 1px grey;
+  color:white;
+}
+
+.titlelast2{
+  -webkit-text-stroke: 1px grey;
+  color:#65ffb3;
+}
