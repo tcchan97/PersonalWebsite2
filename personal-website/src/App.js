@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react'
 import { Canvas,useThree, useFrame , useLoader} from 'react-three-fiber'
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader"
+import logo from './public/logo2.png'
 
 import Model from './Scene'
 import Model2 from './Test'
@@ -81,6 +82,14 @@ const App = () =>{
 
   return (
     <div>
+      <div className="nav-bar">
+        <div className="logo"> <img src={logo} width="70" height="70" atl="Thomas Logo"/></div>
+        <div className="menu">
+          <button className="nav-buttons">Me </button>
+          <button className="nav-buttons">Porfolio </button>
+          <button className="nav-buttons">Contact </button>
+        </div>
+      </div>
       <div className="glftContainer">
         <div className="title">
             <div className="title1">Hi,</div>
