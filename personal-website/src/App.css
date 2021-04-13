@@ -123,8 +123,49 @@
 
 .titlelast3{
 }
+.cardContainer{
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+
+  overflow-y: auto;
+}
+
+.card{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 30%;
+  height: 45%;
+  background-color: white;
+  border-radius: 4px;
+}
 
 @keyframes fadeIn {
   0% {opacity:0; left:-10%}
   100% {opacity:1;left:0%}
   }
+
+  /* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #5e5e5e;
+  border-radius: 20px;
+}

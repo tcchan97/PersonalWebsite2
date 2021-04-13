@@ -79,6 +79,53 @@ export default function App() {
 
 const App = () =>{
 
+  const projects = [
+    {
+      'img':" ",
+      'name': "test",
+      'description': "test"
+    },
+    {
+      'img':" ",
+      'name': "test",
+      'description': "test"
+    },
+    {
+      'img':" ",
+      'name': "test",
+      'description': "test"
+    },
+    {
+      'img':" ",
+      'name': "test",
+      'description': "test"
+    },
+    {
+      'img':" ",
+      'name': "test",
+      'description': "test"
+    },
+    {
+      'img':" ",
+      'name': "test",
+      'description': "test"
+    },
+    {
+      'img':" ",
+      'name': "test",
+      'description': "test"
+    },
+    {
+      'img':" ",
+      'name': "test",
+      'description': "test"
+    },
+    {
+      'img':" ",
+      'name': "test",
+      'description': "test"
+    },
+  ]
 
   return (
     <div>
@@ -86,7 +133,7 @@ const App = () =>{
         <div className="logo"> <img src={logo} width="70" height="70" atl="Thomas Logo"/></div>
         <div className="menu">
           <button className="nav-buttons">Me </button>
-          <button className="nav-buttons">Porfolio </button>
+          <button className="nav-buttons">Portfolio </button>
           <button className="nav-buttons">Contact </button>
         </div>
       </div>
@@ -98,7 +145,7 @@ const App = () =>{
             <div className="title2">And I'm a</div>
             <div className="titlelast2"> Software <span className="titlelast3">Developer</span></div>
         </div>
-        <Canvas style={{ background: "white" }} shadowMap camera={{ position: [0, 0,6], fov:70 }}>
+        <Canvas style={{ background: "white" }} shadowMap camera={{ position: [0, 0,8], fov:70 }}>
           <ambientLight intensity={1} />\
           <spotLight intensity={1} position={[20, 10, 10]} angle={0.5} penumbra={1} shadow-mapSize-width={2048} shadow-mapSize-height={2048} castShadow />
           <Suspense fallback={null} >
@@ -108,11 +155,18 @@ const App = () =>{
         </Canvas>
       </div>
       <div className="glftContainer2">
-        HI ANDIE
+        <div className="cardContainer">
+          {projects.map(project =>(
+            <div className="card">
+              <div>{project.name}</div>
+              <div>{project.description}</div>
+            </div>
+            ))}
+        </div>
       </div>
 
       <div className="glftContainer3">
-        HI ANDIE
+
       </div>
     </div>
   );
