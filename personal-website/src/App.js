@@ -2,6 +2,7 @@ import React, { Suspense, useEffect, useRef, useState } from 'react'
 import { Canvas,useThree, useFrame , useLoader} from 'react-three-fiber'
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader"
 import logo from './public/logo2.png'
+import MSU1 from './public/MSU1.1.png'
 
 import Model from './Scene'
 import Model2 from './Test'
@@ -81,49 +82,34 @@ const App = () =>{
 
   const projects = [
     {
-      'img':" ",
-      'name': "test",
-      'description': "test"
+      'img':MSU1,
+      'name': "Student Union Portal",
+      'description': "The SU Election Portal is intended to create a streamlined and simple way for people to submit requests for their clubs to be added to the annual SU election. The website generates a configured file that is used for the pre-existing system in place, which increases the efficiency of the original election process."
     },
     {
-      'img':" ",
-      'name': "test",
-      'description': "test"
+      'img':MSU1,
+      'name': "Student Union Portal",
+      'description': "The SU Election Portal is intended to create a streamlined and simple way for people to submit requests for their clubs to be added to the annual SU election. The website generates a configured file that is used for the pre-existing system in place, which increases the efficiency of the original election process."
     },
     {
-      'img':" ",
-      'name': "test",
-      'description': "test"
+      'img':MSU1,
+      'name': "Student Union Portal",
+      'description': "The SU Election Portal is intended to create a streamlined and simple way for people to submit requests for their clubs to be added to the annual SU election. The website generates a configured file that is used for the pre-existing system in place, which increases the efficiency of the original election process."
     },
     {
-      'img':" ",
-      'name': "test",
-      'description': "test"
+      'img':MSU1,
+      'name': "Student Union Portal",
+      'description': "The SU Election Portal is intended to create a streamlined and simple way for people to submit requests for their clubs to be added to the annual SU election. The website generates a configured file that is used for the pre-existing system in place, which increases the efficiency of the original election process."
     },
     {
-      'img':" ",
-      'name': "test",
-      'description': "test"
+      'img':MSU1,
+      'name': "Student Union Portal",
+      'description': "The SU Election Portal is intended to create a streamlined and simple way for people to submit requests for their clubs to be added to the annual SU election. The website generates a configured file that is used for the pre-existing system in place, which increases the efficiency of the original election process."
     },
     {
-      'img':" ",
-      'name': "test",
-      'description': "test"
-    },
-    {
-      'img':" ",
-      'name': "test",
-      'description': "test"
-    },
-    {
-      'img':" ",
-      'name': "test",
-      'description': "test"
-    },
-    {
-      'img':" ",
-      'name': "test",
-      'description': "test"
+      'img':MSU1,
+      'name': "Student Union Portal",
+      'description': "The SU Election Portal is intended to create a streamlined and simple way for people to submit requests for their clubs to be added to the annual SU election. The website generates a configured file that is used for the pre-existing system in place, which increases the efficiency of the original election process."
     },
   ]
 
@@ -158,8 +144,9 @@ const App = () =>{
         <div className="cardContainer">
           {projects.map(project =>(
             <div className="card">
-              <div>{project.name}</div>
-              <div>{project.description}</div>
+              <img className="card-img" src={project.img} ></img>
+              <div className="card-title">{project.name}</div>
+              <div className="card-desc">{project.description}</div>
             </div>
             ))}
         </div>
