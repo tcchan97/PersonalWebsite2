@@ -1,11 +1,13 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react'
-import { Canvas, useThree, useFrame, useLoader } from 'react-three-fiber'
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import logo from './public/logo2.png'
-import MSU1 from './public/MSU1.1.png'
+import { Canvas, useThree, useFrame } from 'react-three-fiber'
+import logo from './public/logo3.png'
+import MSU1 from './public/MSU1.png'
+import MSU2 from './public/MSU2.png'
+import MDB1 from './public/MDBooklogin.png'
 
-import Model from './Scene'
-import Model2 from './Test'
+
+
+
 
 import "./App.css"
 
@@ -64,19 +66,7 @@ function Dec2(props) {
   )
 }
 
-/*
-export default function App() {
-  return (
-    <div className="glftContainer">
-      <Canvas style={{ background: "white" }} shadowMap camera={{ position: [0, 0, 10] }}>
-        <ambientLight intensity={1} />\
-        <spotLight intensity={1} position={[20, 10, 10]} angle={0.5} penumbra={1} shadow-mapSize-width={2048} shadow-mapSize-height={2048} castShadow />
-        <Box/>
-  
-      </Canvas>
-    </div>
-  )
-}*/
+
 
 const App = () => {
 
@@ -87,20 +77,21 @@ const App = () => {
       'description': "The SU Election Portal is intended to create a streamlined and simple way for people to submit requests for their clubs to be added to the annual SU election. The website generates a configured file that is used for the pre-existing system in place, which increases the efficiency of the original election process."
     },
     {
-      'img': MSU1,
+      'img': MSU2,
       'name': "Student Union Portal",
       'description': "The SU Election Portal is intended to create a streamlined and simple way for people to submit requests for their clubs to be added to the annual SU election. The website generates a configured file that is used for the pre-existing system in place, which increases the efficiency of the original election process."
     },
     {
-      'img': MSU1,
+      'img': MDB1,
       'name': "Student Union Portal",
       'description': "The SU Election Portal is intended to create a streamlined and simple way for people to submit requests for their clubs to be added to the annual SU election. The website generates a configured file that is used for the pre-existing system in place, which increases the efficiency of the original election process."
     },
-    {
-      'img': MSU1,
-      'name': "Student Union Portal",
-      'description': "The SU Election Portal is intended to create a streamlined and simple way for people to submit requests for their clubs to be added to the annual SU election. The website generates a configured file that is used for the pre-existing system in place, which increases the efficiency of the original election process."
-    },
+    
+    // {
+    //   'img': MSU1,
+    //   'name': "Student Union Portal",
+    //   'description': "The SU Election Portal is intended to create a streamlined and simple way for people to submit requests for their clubs to be added to the annual SU election. The website generates a configured file that is used for the pre-existing system in place, which increases the efficiency of the original election process."
+    // },
   ]
 
   return (
@@ -117,7 +108,7 @@ const App = () => {
         <div className="title">
           <div className="title1">Hi,</div>
           <div className="title2">my name is </div>
-          <div className="titlefirst">Thomas <span className="titlelast">Chan</span> </div>
+          <div className="titlefirst">"Thomas <span className="titlelast">Chan</span> "</div>
           <div className="title2">And I'm a</div>
           <div className="titlelast2"> Software <span className="titlelast3">Developer</span></div>
         </div>
@@ -139,12 +130,30 @@ const App = () => {
               <img className="card-img" src={project.img} ></img>
               <div className="card-title">{project.name}</div>
               <div className="card-desc">{project.description}</div>
+              <button>More</button>
             </div>
           ))}
         </div>
       </div>
 
       <div id="thirdSection" className="glftContainer3">
+        <div data-title-text="Projects" className="containerheader3">About Me</div>
+        <div data-title-text="Projects" className="containerheader4">About Me</div>
+        <div className="thirdContainer">
+          <div>
+            <div>
+              Pic of me
+            </div>
+            <div>
+              section
+            </div>
+          </div>
+          <div>
+            grid
+          </div>
+        </div>
+      </div>
+      <div id="fourthSection" className="glftContainer4">
         <div data-title-text="Projects" className="containerheader3">Contact</div>
         <div data-title-text="Projects" className="containerheader4">Contact</div>
         <div className="thirdContainer">
@@ -152,7 +161,6 @@ const App = () => {
           <div> tcchan@ualberta.ca</div>
           <div><a href="">Resume</a> </div>
         </div>
-        
       </div>
     </div>
   );
